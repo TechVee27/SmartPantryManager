@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/recipes_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F5F7F2">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="24dp" android:text="@string/suggested_recipes" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:background="#173F35" />
+ <TextView android:id="@+id/recipe_count" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:textSize="17sp" android:textColor="#173F35" />
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingBottom="12dp" android:text="@string/strict_explanation" android:textSize="15sp" android:textColor="#455B51" />
+ <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+ <ListView android:id="@+id/recipe_list" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp" />
+ <TextView android:id="@+id/empty_recipes" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="24dp" android:gravity="center" android:text="@string/no_recipes" android:textColor="#365248" android:textSize="19sp" />
+ </FrameLayout>
+ <Button android:id="@+id/back_to_pantry" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:minHeight="52dp" android:text="@string/back_pantry" />
+</LinearLayout>

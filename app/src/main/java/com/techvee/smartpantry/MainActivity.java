@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         list.setEmptyView(findViewById(R.id.empty_pantry));
         findViewById(R.id.add_ingredient).setOnClickListener(view ->
                 startActivity(new Intent(this, IngredientActivity.class)));
+        findViewById(R.id.open_recipes).setOnClickListener(view ->
+                startActivity(new Intent(this, RecipesActivity.class)));
         list.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, IngredientActivity.class);
             intent.putExtra(IngredientActivity.EXTRA_ITEM_ID, id);

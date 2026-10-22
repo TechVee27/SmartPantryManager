@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="suggested_recipes">Suggested recipes</string>
+ <string name="strict_explanation">Only recipes with every ingredient in sufficient quantity appear. Units: 1 cup = 250 ml, 1 tbsp = 15 ml, 1 tsp = 5 ml. Mass and volume are kept separate.</string>
+ <string name="no_recipes">No recipes match your pantry yet. Add more ingredients or check quantities and units.</string>
+ <string name="back_pantry">Back to pantry</string>
+ <string name="back_recipes">Back to recipes</string>
+ <string name="recipe_missing">Recipe not found.</string>
+ <string name="required_ingredients">Required ingredients</string>
+ <string name="preparation">Preparation</string>
+ <plurals name="recipe_matches"><item quantity="one">%d recipe you can make now</item><item quantity="other">%d recipes you can make now</item></plurals>
+</resources>
