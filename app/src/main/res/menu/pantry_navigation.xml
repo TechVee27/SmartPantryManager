@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <item android:id="@+id/nav_add" android:title="@string/add_ingredient" />
+ <item android:id="@+id/nav_recipes" android:title="@string/suggested_recipes" />
+ <item android:id="@+id/nav_settings" android:title="@string/settings_title" />
+</menu>

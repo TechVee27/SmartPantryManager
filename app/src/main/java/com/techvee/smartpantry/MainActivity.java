@@ -11,7 +11,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-/** Displays the latest persisted pantry whenever this screen becomes visible. */
 public class MainActivity extends AppCompatActivity {
     private PantryDatabase database;
     private PantryAdapter adapter;
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
             view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
             return insets;
         });
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.pantry_toolbar);
+        setSupportActionBar(toolbar);
         database = new PantryDatabase(this);
         adapter = new PantryAdapter(this);
         ListView list = findViewById(R.id.pantry_list);
@@ -42,6 +43,30 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(IngredientActivity.EXTRA_ITEM_ID, id);
             startActivity(intent);
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.pantry_navigation, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.nav_add) {
+            startActivity(new Intent(this, IngredientActivity.class));
+            return true;
+        }
+        if (id == R.id.nav_recipes) {
+            startActivity(new Intent(this, RecipesActivity.class));
+            return true;
+        }
+        if (id == R.id.nav_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

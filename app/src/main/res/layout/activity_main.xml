@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F5F7F2">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pantry_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#173F35"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
