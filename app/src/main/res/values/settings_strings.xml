@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="settings_title">Settings</string>
+ <string name="expiry_first_label">Show earliest expiry dates first</string>
+ <string name="settings_explanation">When enabled, dated ingredients appear in expiry order. Items without an expiry date appear last. Otherwise, the pantry is sorted alphabetically. This preference is saved on this device.</string>
+ <string name="app_about">Smart Pantry Manager\nJava and SQLite\n\nRecipe suggestions check ingredient names, quantities and compatible units. Expiry dates help you organise your pantry; they do not certify food safety or automatically exclude ingredients.\n\nAll pantry data stays on this device.</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/settings_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F5F7F2">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="24dp" android:text="@string/settings_title" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:background="#173F35" />
+ <CheckBox android:id="@+id/expiry_first" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="64dp" android:padding="16dp" android:text="@string/expiry_first_label" android:textSize="18sp" android:textColor="#173F35" />
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="24dp" android:text="@string/settings_explanation" android:textSize="17sp" android:textColor="#365248" />
+ <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:padding="24dp" android:text="@string/app_about" android:textSize="16sp" android:textColor="#365248" />
+ <Button android:id="@+id/settings_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:minHeight="52dp" android:text="@string/back_pantry" />
+</LinearLayout>

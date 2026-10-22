@@ -3,6 +3,8 @@ package com.techvee.smartpantry;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.ListView;
+import java.util.List;
+import java.util.Collections;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, IngredientActivity.class)));
         findViewById(R.id.open_recipes).setOnClickListener(view ->
                 startActivity(new Intent(this, RecipesActivity.class)));
+        findViewById(R.id.open_settings).setOnClickListener(view ->
+                startActivity(new Intent(this, SettingsActivity.class)));
         list.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, IngredientActivity.class);
             intent.putExtra(IngredientActivity.EXTRA_ITEM_ID, id);
@@ -43,7 +47,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        adapter.replaceItems(database.getItems());
+        List<PantryItem> items = database.getItems();
+        if (getSharedPreferences(SettingsActivity.PREFERENCES, MODE_PRIVATE)
+                .getBoolean(SettingsActivity.EXPIRY_FIRST, false)) {
+            Collections.sort(items, (first, second) -> {
+                String a = first.expiryDate;
+                String b = second.expiryDate;
+                boolean noA = a == null || a.isEmpty();
+                boolean noB = b == null || b.isEmpty();
+                if (noA && noB) return first.name.compareToIgnoreCase(second.name);
+                if (noA) return 1;
+                if (noB) return -1;
+                int dateOrder = a.compareTo(b);
+                return dateOrder == 0 ? first.name.compareToIgnoreCase(second.name) : dateOrder;
+            });
+        }
+        adapter.replaceItems(items);
     }
 
     @Override
