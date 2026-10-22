@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pantry_title">My pantry</string>
+    <string name="pantry_subtitle">Know what you have. Make the most of it.</string>
+    <string name="pantry_empty">Your pantry is empty.\nIngredients you save will appear here.</string>
+</resources>
