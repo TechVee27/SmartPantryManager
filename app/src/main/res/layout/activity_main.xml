@@ -26,6 +26,13 @@
             android:textSize="16sp"
             android:textColor="#DAE9DF" />
     </LinearLayout>
+    <Button
+        android:id="@+id/add_ingredient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minHeight="52dp"
+        android:text="@string/add_ingredient" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

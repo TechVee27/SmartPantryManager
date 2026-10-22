@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:id="@+id/ingredient_root" android:layout_width="match_parent" android:layout_height="match_parent"
+ android:orientation="vertical" android:background="#F5F7F2">
+ <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+ <TextView android:id="@+id/form_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/add_ingredient" android:textSize="28sp" android:textStyle="bold" android:textColor="#173F35" android:layout_marginBottom="24dp" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ingredient_name_label" android:labelFor="@id/edit_name" android:textSize="16sp" android:textColor="#173F35" />
+ <EditText android:importantForAutofill="no" android:id="@+id/edit_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:inputType="textCapWords" android:singleLine="true" android:layout_marginBottom="16dp" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/quantity_label" android:labelFor="@id/edit_quantity" android:textSize="16sp" android:textColor="#173F35" />
+ <EditText android:importantForAutofill="no" android:id="@+id/edit_quantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:inputType="numberDecimal" android:singleLine="true" android:layout_marginBottom="16dp" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/unit_label" android:labelFor="@id/edit_unit" android:textSize="16sp" android:textColor="#173F35" />
+ <Spinner android:id="@+id/edit_unit" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginBottom="16dp" />
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/expiry_label" android:labelFor="@id/edit_expiry" android:textSize="16sp" android:textColor="#173F35" />
+ <EditText android:importantForAutofill="no" android:id="@+id/edit_expiry" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:inputType="date" android:singleLine="true" android:layout_marginBottom="24dp" />
+ <Button android:id="@+id/save_ingredient" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/save" />
+ <Button android:id="@+id/cancel_ingredient" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/cancel" />
+ <Button android:id="@+id/delete_ingredient" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:text="@string/delete" android:visibility="gone" android:backgroundTint="#A72F31" />
+ </LinearLayout></ScrollView></LinearLayout>

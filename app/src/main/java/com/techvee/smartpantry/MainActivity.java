@@ -1,6 +1,7 @@
 package com.techvee.smartpantry;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.ListView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
         ListView list = findViewById(R.id.pantry_list);
         list.setAdapter(adapter);
         list.setEmptyView(findViewById(R.id.empty_pantry));
+        findViewById(R.id.add_ingredient).setOnClickListener(view ->
+                startActivity(new Intent(this, IngredientActivity.class)));
+        list.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(this, IngredientActivity.class);
+            intent.putExtra(IngredientActivity.EXTRA_ITEM_ID, id);
+            startActivity(intent);
+        });
     }
 
     @Override

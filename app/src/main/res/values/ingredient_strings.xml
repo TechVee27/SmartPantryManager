@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="add_ingredient">Add ingredient</string>
+ <string name="edit_ingredient">Edit ingredient</string>
+ <string name="ingredient_name_label">Ingredient name</string>
+ <string name="ingredient_name_hint">e.g. Tomatoes</string>
+ <string name="quantity_label">Quantity</string>
+ <string name="quantity_hint">e.g. 500</string>
+ <string name="unit_label">Unit</string>
+ <string name="expiry_label">Expiry date (optional, YYYY-MM-DD)</string>
+ <string name="expiry_hint">YYYY-MM-DD</string>
+ <string name="save">Save ingredient</string>
+ <string name="cancel">Cancel</string>
+ <string name="delete">Delete ingredient</string>
+ <string name="delete_title">Delete this ingredient?</string>
+ <string name="delete_message">This removes the ingredient from your pantry.</string>
+ <string name="item_saved">Ingredient saved</string>
+ <string name="item_deleted">Ingredient deleted</string>
+ <string name="item_missing">This ingredient no longer exists.</string>
+ <string name="save_failed">Could not save. Please try again.</string>
+ <string name="name_error">Enter a name between 1 and 80 characters.</string>
+ <string name="quantity_error">Enter a quantity greater than 0 and at most 1000000.</string>
+ <string name="expiry_error">Enter a real date using YYYY-MM-DD.</string>
+ <string-array name="ingredient_units"><item>g</item><item>kg</item><item>ml</item><item>l</item><item>piece</item><item>tsp</item><item>tbsp</item><item>cup</item></string-array>
+</resources>
